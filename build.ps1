@@ -25,7 +25,7 @@ python -m PyInstaller --noconfirm --clean --windowed --name PTW `
     --icon "$root\assets\ptw.ico" `
     --add-binary "$root\assets\libmpv-2.dll;." `
     --add-data "$root\assets\ptw.ico;." `
-    --collect-all tkinterdnd2 `
+    --exclude-module tkinter `
     --paths "$root\src" `
     --distpath "$root\dist" --workpath "$root\build" --specpath "$root\build" `
     "$root\src\ptw.py"
